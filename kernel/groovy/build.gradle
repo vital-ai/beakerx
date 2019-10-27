@@ -36,12 +36,18 @@ sourceSets {
 }
 
 repositories {
+  mavenLocal()
   mavenCentral()
 }
 
 dependencies {
   provided project(':base')
-  compile group: "org.codehaus.groovy", name: "groovy-all", version: "2.5.6"
+  compile group: "vital-ai", name: "vitalsigns", version: "0.2.304"
+//  compile group: "vital-ai", name: "vitalsigns-ast", version: "0.0.1"
+  compile group: "vital-ai", name: "vital-domain", version: "0.2.304"
+  compile group: "vital-ai", name: "vital-lucene", version: "0.2.304"
+  compile group: "vital-ai", name: "vitalservice", version: "0.2.304"
+  compile group: "org.codehaus.groovy", name: "groovy-all", version: "2.5.0-SNAPSHOT"
   compile group: 'org.antlr', name: 'antlr4-runtime', version: "$antlr4Version"
   antlr group: 'org.antlr', name: 'antlr4', version: "$antlr4Version"
 
